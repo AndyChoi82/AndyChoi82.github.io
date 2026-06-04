@@ -71,8 +71,8 @@
     var count = 3;
     var el = document.getElementById('countdown');
     function tick() {
-        if (count <= 0) { window.location.replace(TARGET); return; }
         el.textContent = 'Redirecting automatically in ' + count + ' second' + (count !== 1 ? 's' : '') + '...';
+        if (count <= 0) { window.location.replace(TARGET); return; }
         count--;
         setTimeout(tick, 1000);
     }
